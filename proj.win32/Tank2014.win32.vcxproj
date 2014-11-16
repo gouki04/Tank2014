@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>Tank2014</ProjectName>
+    <ProjectGuid>{D008AE00-796C-4791-B60F-243A08D253A0}</ProjectGuid>
+    <RootNamespace>Tank2014win32</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+    <IntDir>$(Configuration).win32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;..\Classes;..\..\jsoncpp-src-0.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;json_vc71_libmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);..\..\jsoncpp-src-0.5.0\build\vs71\debug\lib_json;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)cocos2dx;$(SolutionDir)cocos2dx\include;$(SolutionDir)cocos2dx\kazmath\include;$(SolutionDir)cocos2dx\platform\win32;$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES;..\Classes;..\..\jsoncpp-src-0.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glew32.lib;libcocos2d.lib;json_vc71_libmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);..\..\jsoncpp-src-0.5.0\build\vs71\release\lib_json;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;LIBCMT</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\KeyBoardMgr.cpp" />
+    <ClCompile Include="..\Classes\MainLayer.cpp" />
+    <ClCompile Include="..\Classes\MainScene.cpp" />
+    <ClCompile Include="..\Classes\Map.cpp" />
+    <ClCompile Include="..\Classes\MapAnimation.cpp" />
+    <ClCompile Include="..\Classes\MapCollideMgr.cpp" />
+    <ClCompile Include="..\Classes\MapElementFactory.cpp" />
+    <ClCompile Include="..\Classes\MapItem.cpp" />
+    <ClCompile Include="..\Classes\MapRender.cpp" />
+    <ClCompile Include="..\Classes\MapBase.cpp" />
+    <ClCompile Include="..\Classes\MapBrick.cpp" />
+    <ClCompile Include="..\Classes\MapBullet.cpp" />
+    <ClCompile Include="..\Classes\MapElement.cpp" />
+    <ClCompile Include="..\Classes\MapEnemyTank.cpp" />
+    <ClCompile Include="..\Classes\MapGrass.cpp" />
+    <ClCompile Include="..\Classes\MapMovableElement.cpp" />
+    <ClCompile Include="..\Classes\MapSteel.cpp" />
+    <ClCompile Include="..\Classes\MapTank.cpp" />
+    <ClCompile Include="..\Classes\MapUserTank.cpp" />
+    <ClCompile Include="..\Classes\MapWall.cpp" />
+    <ClCompile Include="..\Classes\IFireBehaviour.cpp" />
+    <ClCompile Include="..\Classes\IMoveBehaviour.cpp" />
+    <ClCompile Include="..\Classes\MoveBehaviour_AI.cpp" />
+    <ClCompile Include="..\Classes\MoveBehaviour_Bullet.cpp" />
+    <ClCompile Include="..\Classes\MoveBehaviour_Keyboard.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\KeyBoardMgr.h" />
+    <ClInclude Include="..\Classes\MainLayer.h" />
+    <ClInclude Include="..\Classes\MainScene.h" />
+    <ClInclude Include="..\Classes\Map.h" />
+    <ClInclude Include="..\Classes\MapAnimation.h" />
+    <ClInclude Include="..\Classes\MapCollideMgr.h" />
+    <ClInclude Include="..\Classes\MapCommon.h" />
+    <ClInclude Include="..\Classes\MapElementFactory.h" />
+    <ClInclude Include="..\Classes\MapItem.h" />
+    <ClInclude Include="..\Classes\MapRender.h" />
+    <ClInclude Include="..\Classes\StringUtility.h" />
+    <ClInclude Include="..\Classes\MapBase.h" />
+    <ClInclude Include="..\Classes\MapBrick.h" />
+    <ClInclude Include="..\Classes\MapBullet.h" />
+    <ClInclude Include="..\Classes\MapElement.h" />
+    <ClInclude Include="..\Classes\MapEnemyTank.h" />
+    <ClInclude Include="..\Classes\MapGrass.h" />
+    <ClInclude Include="..\Classes\MapMovableElement.h" />
+    <ClInclude Include="..\Classes\MapSteel.h" />
+    <ClInclude Include="..\Classes\MapTank.h" />
+    <ClInclude Include="..\Classes\MapUserTank.h" />
+    <ClInclude Include="..\Classes\MapWall.h" />
+    <ClInclude Include="..\Classes\IFireBehaviour.h" />
+    <ClInclude Include="..\Classes\IMoveBehaviour.h" />
+    <ClInclude Include="..\Classes\MoveBehaviour_AI.h" />
+    <ClInclude Include="..\Classes\MoveBehaviour_Bullet.h" />
+    <ClInclude Include="..\Classes\MoveBehaviour_Keyboard.h" />
+    <ClInclude Include="main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\animation.json" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

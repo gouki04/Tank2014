@@ -1,0 +1,401 @@
+{
+    "Base": {
+        "idle": {
+            "frames": [
+                "base.png"
+            ],
+            "rate": 8
+        },
+        "dead": {
+            "frames": [
+                "base_destroy.png"
+            ],
+            "rate": 8
+        }
+    },
+    "Brick": {
+        "idle": {
+            "frames": [
+                "brick.png"
+            ],
+            "rate": 8
+        }
+    },
+    "Grass": {
+        "idle": {
+            "frames": [
+                "grass.png"
+            ],
+            "rate": 8
+        }
+    },
+    "Steel": {
+        "idle": {
+            "frames": [
+                "steel.png"
+            ],
+            "rate": 8
+        }
+    },
+    "EnemyTank_1": {
+        "idle": {
+            "frames": [
+                "enemy1D.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "enemy1D.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "enemy1L.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "enemy1R.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "enemy1U.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "enemy1D.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "enemy1L.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "enemy1R.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "enemy1U.png"
+            ],
+            "rate": 8
+        }
+    },
+    "EnemyTank_2": {
+        "idle": {
+            "frames": [
+                "enemy2D.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "enemy2D.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "enemy2L.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "enemy2R.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "enemy2U.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "enemy2D.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "enemy2L.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "enemy2R.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "enemy2U.png"
+            ],
+            "rate": 8
+        }
+    },
+    "EnemyTank_3": {
+        "idle": {
+            "frames": [
+                "enemy3D.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "enemy3D.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "enemy3L.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "enemy3R.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "enemy3U.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "enemy3D.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "enemy3L.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "enemy3R.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "enemy3U.png"
+            ],
+            "rate": 8
+        }
+    },
+    "Bomb" : {
+    	"idle" : {
+    		"frames" : [
+    			"blast1.png",
+    			"blast2.png",
+    			"blast3.png",
+    			"blast4.png",
+    			"blast5.png",
+    			"blast6.png",
+    			"blast7.png",
+    			"blast8.png"
+    		],
+            "rate": 15
+    	}
+    },
+    "SmallBomb" : {
+        "idle" : {
+            "frames" : [
+                "blast1.png",
+                "blast2.png",
+                "blast3.png"
+            ],
+            "rate": 15
+        }
+    },
+    "UserTank_1": {
+        "idle": {
+            "frames": [
+                "p1tankD.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "p1tankD.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "p1tankL.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "p1tankR.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "p1tankU.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "p1tankD.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "p1tankL.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "p1tankR.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "p1tankU.png"
+            ],
+            "rate": 8
+        }
+    },
+    "UserTank_2": {
+        "idle": {
+            "frames": [
+                "p2tankD.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "p2tankD.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "p2tankL.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "p2tankR.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "p2tankU.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "p2tankD.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "p2tankL.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "p2tankR.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "p2tankU.png"
+            ],
+            "rate": 8
+        }
+    },
+    "Bullet1": {
+        "idle": {
+            "frames": [
+                "bullet1D.png"
+            ],
+            "rate": 8
+        },
+        "idleD": {
+            "frames": [
+                "bullet1D.png"
+            ],
+            "rate": 8
+        },
+        "idleL": {
+            "frames": [
+                "bullet1L.png"
+            ],
+            "rate": 8
+        },
+        "idleR": {
+            "frames": [
+                "bullet1R.png"
+            ],
+            "rate": 8
+        },
+        "idleU": {
+            "frames": [
+                "bullet1U.png"
+            ],
+            "rate": 8
+        },
+        "moveD": {
+            "frames": [
+                "bullet1D.png"
+            ],
+            "rate": 8
+        },
+        "moveL": {
+            "frames": [
+                "bullet1L.png"
+            ],
+            "rate": 8
+        },
+        "moveR": {
+            "frames": [
+                "bullet1R.png"
+            ],
+            "rate": 8
+        },
+        "moveU": {
+            "frames": [
+                "bullet1U.png"
+            ],
+            "rate": 8
+        }
+    }
+}

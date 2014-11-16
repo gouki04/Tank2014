@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Classes\mapElem">
+      <UniqueIdentifier>{cd64bd70-cdee-4314-af1f-533a60d2b933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\behaviour">
+      <UniqueIdentifier>{01da12cd-5777-472c-8cf9-0ada6b98b66b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{ea1f932e-00a9-4f54-b804-1bcaf4830d81}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\KeyBoardMgr.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainLayer.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Map.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapAnimation.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapCollideMgr.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapElementFactory.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapRender.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBase.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBrick.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBullet.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapElement.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapEnemyTank.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapGrass.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapMovableElement.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapSteel.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapTank.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapUserTank.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapWall.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\IFireBehaviour.cpp">
+      <Filter>Classes\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\IMoveBehaviour.cpp">
+      <Filter>Classes\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_AI.cpp">
+      <Filter>Classes\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_Bullet.cpp">
+      <Filter>Classes\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_Keyboard.cpp">
+      <Filter>Classes\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapItem.cpp">
+      <Filter>Classes\mapElem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\KeyBoardMgr.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainLayer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Map.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapAnimation.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapCollideMgr.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapCommon.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapElementFactory.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapRender.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StringUtility.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBase.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBrick.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBullet.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapElement.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapEnemyTank.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapGrass.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapMovableElement.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapSteel.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapTank.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapUserTank.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapWall.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IFireBehaviour.h">
+      <Filter>Classes\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IMoveBehaviour.h">
+      <Filter>Classes\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_AI.h">
+      <Filter>Classes\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_Bullet.h">
+      <Filter>Classes\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_Keyboard.h">
+      <Filter>Classes\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapItem.h">
+      <Filter>Classes\mapElem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\animation.json">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+</Project>
