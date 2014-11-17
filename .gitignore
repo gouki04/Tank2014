@@ -5,7 +5,7 @@
 *.pydevproject
 .project
 .metadata
-bin/
+# bin/
 tmp/
 *.tmp
 *.bak
@@ -214,7 +214,8 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-.svn/
+*.exe
+
 design/tmp/
 Resources/img2/
 proj.win32/Debug.win32/
