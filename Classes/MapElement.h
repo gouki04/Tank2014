@@ -40,9 +40,6 @@ public:
     virtual cocos2d::CCRect boundingBox();
 
 protected:
-    virtual void initWithSprite(const char *filename);
-
-protected:
     Map *m_map;
     cocos2d::CCSprite *m_mainSpr;
     std::string m_animName;

@@ -19,19 +19,6 @@ MapElement::~MapElement()
 
 }
 
-void MapElement::initWithSprite( const char *filename )
-{
-    CCSprite *spr = CCSprite::create(filename);
-    CCSize sprSize = spr->getContentSize();
-
-    spr->setAnchorPoint(ccp(0.5f,0.5f));
-    spr->setPosition(ccp(sprSize.width/2.f, sprSize.height/2.f));
-
-    setContentSize(sprSize);
-    
-    addChild(spr);
-}
-
 CCRect MapElement::boundingBox()
 {
     if (m_mainSpr)

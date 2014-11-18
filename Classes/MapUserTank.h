@@ -17,6 +17,9 @@ public:
 
     virtual eMapElement getElemType() { return eMapElement::UserTank; }
     virtual std::string getElemTypeStr() { return "UserTank"; }
+
+protected:
+    int m_level;
 };
 
 #endif // MapUserTank_h__
