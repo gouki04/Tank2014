@@ -65,7 +65,7 @@ bool Map::initWithSize(int row, int col)
         {
             eMapElement elemtype = static_cast<eMapElement::ENUM>(mapdata[m_row-1-r].asString()[c]);
             
-            if (MapElement *elem = MapElementFactory::create(elemtype))
+            if (MapElement *elem = MapElementFactory::createElem(elemtype))
             {
                 elem->setAnchorPoint(ccp(0.5f, 0.5f));
                 elem->setMap(this);

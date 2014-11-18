@@ -89,3 +89,8 @@ void MapElement::playAnimation( const std::string &subName )
 {
     playAnimation(m_animName, subName);
 }
+
+void MapElement::setMainAnimName( const std::string &animName )
+{
+    m_animName = animName;
+}

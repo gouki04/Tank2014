@@ -16,6 +16,8 @@ MapEnemyTank::~MapEnemyTank()
 
 bool MapEnemyTank::initWithLevel( int level )
 {
+    m_animName = utility::toString("EnemyTank_", level);
+
     setMoveBahaviour(MoveBehaviour_AI::create());
     playAnimation("idle");
 

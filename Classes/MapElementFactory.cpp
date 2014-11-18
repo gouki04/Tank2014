@@ -6,7 +6,7 @@
 
 USING_NS_CC;
 
-MapElement * MapElementFactory::create( const eMapElement &elemtype )
+MapElement * MapElementFactory::createElem( const eMapElement &elemtype )
 {
     if (elemtype == eMapElement::Brick)
     {

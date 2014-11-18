@@ -35,7 +35,6 @@ public:
 
     virtual void update(float dt);
 
-protected:
     virtual void setMoveBahaviour(IMoveBehaviour *behaviour);
 
 protected:

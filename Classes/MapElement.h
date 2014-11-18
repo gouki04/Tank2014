@@ -35,6 +35,8 @@ public:
     virtual void playAnimation(const std::string &name, const std::string &animSubName);
     virtual void playAnimation(const std::string &subName);
 
+    virtual void setMainAnimName(const std::string &animName);
+
     virtual cocos2d::CCRect boundingBox();
 
 protected:
