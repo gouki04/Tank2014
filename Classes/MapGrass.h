@@ -3,18 +3,20 @@
 
 #include "MapElement.h"
 
-class MapGrass : public MapElement
-{
-public:
-    MapGrass();
-    ~MapGrass();
+namespace gouki {
+    class MapGrass : public MapElement
+    {
+    public:
+        MapGrass();
+        virtual ~MapGrass();
 
-    virtual bool init();
+        virtual bool init() override;
 
-    static MapGrass *create();
+        static MapGrass *create();
 
-    virtual eMapElement getElemType() { return eMapElement::Grass; }
-    virtual std::string getElemTypeStr() { return "Grass"; }
-};
+        virtual eMapElement getElemType() override { return eMapElement::Grass; }
+        virtual std::string getElemTypeStr() override { return "Grass"; }
+    };
+}
 
 #endif // MapGrass_h__

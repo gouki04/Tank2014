@@ -1,41 +1,42 @@
 #ifndef MapCollideMgr_h__
 #define MapCollideMgr_h__
 
-#include "cocoa\CCObject.h"
 #include "MapCommon.h"
 #include <vector>
-#include "cocoa\CCGeometry.h"
 #include "Map.h"
+#include "base\CCRef.h"
 
-class Map;
+namespace gouki {
+    class Map;
 
-class MapCollideMgr : public cocos2d::CCObject
-{
-public:
-    MapCollideMgr();
-    ~MapCollideMgr();
+    class MapCollideMgr : public cocos2d::Ref
+    {
+    public:
+        MapCollideMgr();
+        virtual ~MapCollideMgr();
 
-    void setMap(Map *map);
+        void setMap(Map *map);
 
-    MapElemVec getCollideElemByMap(MapElement *elem, const cocos2d::CCRect &aabb);
-    MapElemVec getBlockElemByMap(MapElement *elem, const cocos2d::CCRect &aabb);
-    
-    bool isBlock(MapElement *elem);
-    bool isBlock(const cocos2d::CCRect &aabb);
+        MapElemVec getCollideElemByMap(MapElement *elem, const cocos2d::Rect &aabb);
+        MapElemVec getBlockElemByMap(MapElement *elem, const cocos2d::Rect &aabb);
 
-    bool isHit(MapElement *elem, const cocos2d::CCRect &aabb);
-    bool isHit(MapElement *elem, const cocos2d::CCRect &aabb, MapTankVec &tanks);
+        bool isBlock(MapElement *elem);
+        bool isBlock(const cocos2d::Rect &aabb);
 
-    MapElemVec getCollideElem(const cocos2d::CCRect &aabb, float allowance = 0.f);
+        bool isHit(MapElement *elem, const cocos2d::Rect &aabb);
+        bool isHit(MapElement *elem, const cocos2d::Rect &aabb, MapTankVec &tanks);
 
-    bool blockCheck(MapElement *elem, const cocos2d::CCRect &aabb);
+        MapElemVec getCollideElem(const cocos2d::Rect &aabb, float allowance = 0.f);
 
-public:
-    static MapCollideMgr *sharedMapCollideMgr();
-    static void purgeSharedMapCollideMgr();
+        bool blockCheck(MapElement *elem, const cocos2d::Rect &aabb);
 
-protected:
-    Map *m_map;
-};
+    public:
+        static MapCollideMgr *sharedMapCollideMgr();
+        static void purgeSharedMapCollideMgr();
+
+    protected:
+        Map *m_map;
+    };
+}
 
 #endif // MapCollideMgr_h__

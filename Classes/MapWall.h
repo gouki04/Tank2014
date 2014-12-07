@@ -3,17 +3,22 @@
 
 #include "MapElement.h"
 
-class MapWall : public MapElement
-{
-public:
-    virtual bool init();
+namespace gouki {
+    class MapWall : public MapElement
+    {
+    public:
+        MapWall();
+        virtual ~MapWall();
 
-    static MapWall *create();
+        virtual bool init() override;
 
-    virtual eMapElement getElemType() { return eMapElement::Wall; }
-    virtual std::string getElemTypeStr() { return "Wall"; }
+        static MapWall *create();
 
-    virtual bool isBlock() const { return true; }
-};
+        virtual eMapElement getElemType() override { return eMapElement::Wall; }
+        virtual std::string getElemTypeStr() override { return "Wall"; }
+
+        virtual bool isBlock() const override { return true; }
+    };
+}
 
 #endif // MapWall_h__

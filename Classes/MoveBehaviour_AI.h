@@ -3,12 +3,14 @@
 
 #include "IMoveBehaviour.h"
 
-class MoveBehaviour_AI : public IMoveBehaviour
-{
-public:
-    virtual void update(MapMovableElement *elem, float dt);
+namespace gouki {
+    class MoveBehaviour_AI : public IMoveBehaviour
+    {
+    public:
+        virtual void update(MapMovableElement *elem, float dt);
 
-    static MoveBehaviour_AI *create();
-};
+        static MoveBehaviour_AI *create();
+    };
+}
 
 #endif // MovBehaviour_AI_h__

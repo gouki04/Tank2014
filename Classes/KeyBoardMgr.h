@@ -1,20 +1,22 @@
 #ifndef KeyBoardMgr_h__
 #define KeyBoardMgr_h__
 
-#include "cocoa\CCObject.h"
+#include "base\CCRef.h"
 
-class KeyBoardMgr : public cocos2d::CCObject
-{
-public:
-    KeyBoardMgr();
-    ~KeyBoardMgr();
+namespace gouki {
+    class KeyBoardMgr : public cocos2d::Ref
+    {
+    public:
+        KeyBoardMgr();
+        virtual ~KeyBoardMgr();
 
-    bool isKeyDown(int virKey);
-    bool isKeyUp(int virKey);
+        bool isKeyDown(int virKey);
+        bool isKeyUp(int virKey);
 
-public:
-    static KeyBoardMgr *sharedKeyBoardMgr();
-    static void purgeSharedKeyBoardMgr();
-};
+    public:
+        static KeyBoardMgr *sharedKeyBoardMgr();
+        static void purgeSharedKeyBoardMgr();
+    };
+}
 
 #endif // KeyBoardMgr_h__

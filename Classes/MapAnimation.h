@@ -1,30 +1,32 @@
 #ifndef MapAnimation_h__
 #define MapAnimation_h__
 
-#include "cocoa/CCObject.h"
 #include <string>
+#include "base/CCRef.h"
 
 namespace cocos2d {
-    class CCAnimation;
+    class Animation;
 }
 
 namespace Json {
     class Value;
 }
 
-class MapAnimation : public cocos2d::CCObject
-{
-public:
-    static MapAnimation* sharedMapAnimation(void);
+namespace gouki {
+    class MapAnimation : public cocos2d::Ref
+    {
+    public:
+        static MapAnimation* sharedMapAnimation(void);
 
-    static void purgeSharedMapAnimation(void);
+        static void purgeSharedMapAnimation(void);
 
-    void init();
+        void init();
 
-    cocos2d::CCAnimation *createAnimation(const std::string &animName, const std::string &animSubName);
+        cocos2d::Animation *createAnimation(const std::string &animName, const std::string &animSubName);
 
-private:
-    Json::Value *m_root;
-};
+    private:
+        Json::Value *m_root;
+    };
+}
 
 #endif // MapAnimation_h__

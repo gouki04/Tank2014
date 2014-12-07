@@ -1,44 +1,38 @@
 #include "MainScene.h"
 #include "MainLayer.h"
-#include "CCDirector.h"
-#include "support\CCPointExtension.h"
+#include "cocos/base/CCDirector.h"
 
-USING_NS_CC;
+namespace gouki {
+    MainScene::MainScene() {
 
-MainScene::MainScene()
-{
-
-}
-
-MainScene::~MainScene()
-{
-
-}
-
-MainScene * MainScene::create()
-{
-    MainScene *scene = new MainScene;
-    if (scene && scene->init())
-    {
-        scene->autorelease();
-        return scene;
     }
-    
-    CC_SAFE_DELETE(scene);
-    return 0;
-}
 
-void MainScene::onEnter()
-{
-    CCScene::onEnter();
+    MainScene::~MainScene() {
 
-    MainLayer *layer = MainLayer::create();
+    }
 
-    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    float scale = winSize.height / (28 * 30);
+    MainScene *MainScene::create() {
+        MainScene *scene = new MainScene;
+        if (scene && scene->init()) {
+            scene->autorelease();
+            return scene;
+        }
 
-    layer->setAnchorPoint(ccp(0.f, 0.f));
-    layer->setScale(scale);
+        CC_SAFE_DELETE(scene);
+        return nullptr;
+    }
 
-    addChild(layer);
+    void MainScene::onEnter() {
+        cocos2d::Scene::onEnter();
+
+        MainLayer *layer = MainLayer::create();
+
+        cocos2d::Size winSize = cocos2d::Director::getInstance()->getWinSize();
+        float scale = winSize.height / (28.0 * 32.0);
+
+        layer->setAnchorPoint(cocos2d::Vec2(0.f, 0.f));
+        layer->setScale(scale);
+
+        addChild(layer);
+    }
 }

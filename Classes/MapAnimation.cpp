@@ -1,68 +1,60 @@
 #include "MapAnimation.h"
-#include "sprite_nodes\CCSprite.h"
 #include "json\json.h"
-#include "sprite_nodes\CCAnimation.h"
-#include "platform\CCFileUtils.h"
-#include "sprite_nodes\CCSpriteFrameCache.h"
+#include "2d\CCAnimation.h"
+#include "2d\CCSpriteFrameCache.h"
+#include "base\CCVector.h"
+#include "CCFileUtils.h"
 
-USING_NS_CC;
+namespace gouki {
+    MapAnimation* s_pSharedMapAnimation = NULL;
 
-MapAnimation* s_pSharedMapAnimation = NULL;
-
-MapAnimation* MapAnimation::sharedMapAnimation( void )
-{
-    if (! s_pSharedMapAnimation)
-    {
-        s_pSharedMapAnimation = new MapAnimation();
-        s_pSharedMapAnimation->init();
-    }
-
-    return s_pSharedMapAnimation;
-}
-
-void MapAnimation::purgeSharedMapAnimation( void )
-{
-    CC_SAFE_RELEASE_NULL(s_pSharedMapAnimation);
-}
-
-cocos2d::CCAnimation * MapAnimation::createAnimation( const std::string &animName, const std::string &animSubName )
-{
-    Json::Value &jAnim = (*m_root)[animName];
-    Json::Value &jSubAnim = jAnim[animSubName];
-    if (!jSubAnim.isNull())
-    {
-        Json::Value &jFrames = jSubAnim["frames"];
-        CCArray *frameArr = CCArray::create(jFrames.size());
-        for (Json::Value::ArrayIndex i = 0; i < jFrames.size(); ++i)
-        {
-            if (CCSpriteFrame *frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(jFrames[i].asCString()))
-                frameArr->addObject(frame);
+    MapAnimation* MapAnimation::sharedMapAnimation( void ) {
+        if (! s_pSharedMapAnimation) {
+            s_pSharedMapAnimation = new MapAnimation();
+            s_pSharedMapAnimation->init();
         }
 
-        float delayPerUnit = 1.f / jSubAnim["rate"].asDouble();
-
-        return CCAnimation::create(frameArr, delayPerUnit);
+        return s_pSharedMapAnimation;
     }
 
-    return 0;
-}
+    void MapAnimation::purgeSharedMapAnimation( void ) {
+        CC_SAFE_RELEASE_NULL(s_pSharedMapAnimation);
+    }
 
-void MapAnimation::init()
-{
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("main.plist", "main.png");
+    cocos2d::Animation * MapAnimation::createAnimation( const std::string &animName, const std::string &animSubName ) {
+        Json::Value &jAnim = (*m_root)[animName];
+        Json::Value &jSubAnim = jAnim[animSubName];
+        if (!jSubAnim.isNull()) {
+            Json::Value &jFrames = jSubAnim["frames"];
+            auto frameArr = cocos2d::Vector<cocos2d::SpriteFrame*>(jFrames.size());
+            for (Json::Value::ArrayIndex i = 0; i < jFrames.size(); ++i) {
+                if (cocos2d::SpriteFrame *frame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(jFrames[i].asString())) {
+                    frameArr.pushBack(frame);
+                }
+            }
 
-    unsigned char *file_buffer;
-    unsigned long file_size;
+            float delayPerUnit = 1.f / jSubAnim["rate"].asDouble();
 
-    file_buffer = CCFileUtils::sharedFileUtils()->getFileData("animation.json", "r", &file_size);
+            return cocos2d::Animation::createWithSpriteFrames(frameArr, delayPerUnit);
+        }
 
-    Json::Reader reader;
-    m_root = new Json::Value;
-    const char *beginDoc = (const char*)(file_buffer);
-    const char *endDoc = (const char*)(file_buffer+file_size);
+        return nullptr;
+    }
 
-    if (!reader.parse(beginDoc, endDoc, *m_root))
-    {
-        CCMessageBox(reader.getFormatedErrorMessages().c_str(), "Json Parse Error!");
+    void MapAnimation::init() {
+        cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("main.plist", "main.png");
+
+        auto fileData = cocos2d::FileUtils::getInstance()->getDataFromFile("animation.json");
+
+        Json::Reader reader;
+        m_root = new Json::Value;
+        const char *beginDoc = (const char*)(fileData.getBytes());
+        const char *endDoc = (const char*)(fileData.getBytes() + fileData.getSize());
+
+        if (!reader.parse(beginDoc, endDoc, *m_root)) {
+            cocos2d::MessageBox(reader.getFormatedErrorMessages().c_str(), "Json Parse Error!");
+        }
+
+        fileData.clear();
     }
 }

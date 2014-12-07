@@ -1,42 +1,35 @@
 #include "KeyBoardMgr.h"
 #include <Windows.h>
 
-USING_NS_CC;
+namespace gouki {
+    static KeyBoardMgr *pSharedKeyBoardMgr = NULL;
 
-static KeyBoardMgr *pSharedKeyBoardMgr = NULL;
+    KeyBoardMgr * KeyBoardMgr::sharedKeyBoardMgr() {
+        if (! pSharedKeyBoardMgr) {
+            pSharedKeyBoardMgr = new KeyBoardMgr();
+            //pSharedKeyBoardMgr->init();
+        }
 
-KeyBoardMgr * KeyBoardMgr::sharedKeyBoardMgr()
-{
-    if (! pSharedKeyBoardMgr)
-    {
-        pSharedKeyBoardMgr = new KeyBoardMgr();
-        //pSharedKeyBoardMgr->init();
+        return pSharedKeyBoardMgr;
     }
 
-    return pSharedKeyBoardMgr;
-}
+    void KeyBoardMgr::purgeSharedKeyBoardMgr() {
+        CC_SAFE_RELEASE_NULL(pSharedKeyBoardMgr);
+    }
 
-void KeyBoardMgr::purgeSharedKeyBoardMgr()
-{
-    CC_SAFE_RELEASE_NULL(pSharedKeyBoardMgr);
-}
+    KeyBoardMgr::KeyBoardMgr() {
 
-KeyBoardMgr::KeyBoardMgr()
-{
+    }
 
-}
+    KeyBoardMgr::~KeyBoardMgr() {
 
-KeyBoardMgr::~KeyBoardMgr()
-{
+    }
 
-}
+    bool KeyBoardMgr::isKeyDown( int virKey ) {
+        return GetKeyState(virKey) < 0;
+    }
 
-bool KeyBoardMgr::isKeyDown( int virKey )
-{
-    return GetKeyState(virKey) < 0;
-}
-
-bool KeyBoardMgr::isKeyUp( int virKey )
-{
-    return GetKeyState(virKey) > 0;
+    bool KeyBoardMgr::isKeyUp( int virKey ) {
+        return GetKeyState(virKey) > 0;
+    }
 }

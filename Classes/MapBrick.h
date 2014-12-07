@@ -3,20 +3,22 @@
 
 #include "MapElement.h"
 
-class MapBrick : public MapElement
-{
-public:
-    MapBrick();
-    ~MapBrick();
+namespace gouki {
+    class MapBrick : public MapElement
+    {
+    public:
+        MapBrick();
+        virtual ~MapBrick();
 
-    virtual bool init();
+        virtual bool init() override;
 
-    static MapBrick *create();
+        static MapBrick *create();
 
-    virtual eMapElement getElemType() { return eMapElement::Brick; }
-    virtual std::string getElemTypeStr() { return "Brick"; }
+        virtual eMapElement getElemType() override { return eMapElement::Brick; }
+        virtual std::string getElemTypeStr() override { return "Brick"; }
 
-    virtual bool isBlock() const { return true; }
-};
+        virtual bool isBlock() const override { return true; }
+    };
+}
 
 #endif // MapBrick_h__

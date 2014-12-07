@@ -3,23 +3,23 @@
 
 #include "MapTank.h"
 
-class MapUserTank : public MapTank
-{
-public:
-    MapUserTank();
-    ~MapUserTank();
+namespace gouki {
+    class MapUserTank : public MapTank
+    {
+    public:
+        MapUserTank();
+        virtual ~MapUserTank();
 
-    virtual bool init();
+        virtual bool init() override;
 
-    virtual void draw();
+        static MapUserTank *create();
 
-    static MapUserTank *create();
+        virtual eMapElement getElemType() override { return eMapElement::UserTank; }
+        virtual std::string getElemTypeStr() override { return "UserTank"; }
 
-    virtual eMapElement getElemType() { return eMapElement::UserTank; }
-    virtual std::string getElemTypeStr() { return "UserTank"; }
-
-protected:
-    int m_level;
-};
+    protected:
+        int m_level;
+    };
+}
 
 #endif // MapUserTank_h__

@@ -1,83 +1,71 @@
 #include "MapElement.h"
-#include "sprite_nodes\CCSprite.h"
-#include "support\CCPointExtension.h"
 #include "MapAnimation.h"
-#include "actions/CCActionInterval.h"
-
-USING_NS_CC;
+#include "2d/CCSprite.h"
+#include "2d/CCActionInterval.h"
 
 #define MAP_ELEM_ANIM_TAG 99
 
-MapElement::MapElement()
-: m_mainSpr(0)
-{
+namespace gouki {
+    MapElement::MapElement()
+        : m_mainSpr(0) {
 
-}
-
-MapElement::~MapElement()
-{
-
-}
-
-CCRect MapElement::boundingBox()
-{
-    if (m_mainSpr)
-    {
-        CCRect rect = m_mainSpr->getTextureRect();
-        rect.origin.x = 0;
-        rect.origin.y = 0;
-
-        CCAffineTransform transform = m_mainSpr->nodeToParentTransform();
-        transform = CCAffineTransformConcat(transform, nodeToParentTransform());
-
-        return CCRectApplyAffineTransform(rect, transform);
     }
-    
-    return CCRectApplyAffineTransform(CCRect(0, 0, 30, 30), nodeToParentTransform());
 
-    CCRect aabb = CCNode::boundingBox();
+    MapElement::~MapElement() {
 
-    //aabb.origin.x -= aabb.size.width * getAnchorPoint().x;
-    //aabb.origin.y -= aabb.size.height * getAnchorPoint().y;
+    }
 
-    return aabb;
-}
+    cocos2d::Rect MapElement::getBoundingBox() const {
+        if (m_mainSpr) {
+            cocos2d::Rect rect = m_mainSpr->getTextureRect();
+            rect.origin.x = 0;
+            rect.origin.y = 0;
 
-bool MapElement::isBlock( const MapElemVec &elems )
-{
-    return false;
-}
+            auto transform = m_mainSpr->getNodeToParentAffineTransform();
+            transform = AffineTransformConcat(transform, getNodeToParentAffineTransform());
 
-void MapElement::collide( const MapElemVec &elems )
-{
-
-}
-
-void MapElement::playAnimation( const std::string &name, const std::string &animSubName )
-{
-    if (CCAnimation *animInfo = MapAnimation::sharedMapAnimation()->createAnimation(name, animSubName))
-    {
-        if (!m_mainSpr)
-        {
-            m_mainSpr = CCSprite::create();
-            m_mainSpr->setAnchorPoint(ccp(0.5, 0.5));
-            addChild(m_mainSpr);
+            return RectApplyAffineTransform(rect, transform);
         }
-        
-        CCAction * action = CCRepeatForever::create(CCAnimate::create(animInfo));
-        action->setTag(MAP_ELEM_ANIM_TAG);
 
-        m_mainSpr->stopActionByTag(MAP_ELEM_ANIM_TAG);
-        m_mainSpr->runAction(action);
+        return RectApplyAffineTransform(cocos2d::Rect(0, 0, 30, 30), getNodeToParentAffineTransform());
+
+        cocos2d::Rect aabb = Node::getBoundingBox();
+
+        //aabb.origin.x -= aabb.size.width * getAnchorPoint().x;
+        //aabb.origin.y -= aabb.size.height * getAnchorPoint().y;
+
+        return aabb;
     }
-}
 
-void MapElement::playAnimation( const std::string &subName )
-{
-    playAnimation(m_animName, subName);
-}
+    bool MapElement::isBlock( const MapElemVec &elems ) {
+        return false;
+    }
 
-void MapElement::setMainAnimName( const std::string &animName )
-{
-    m_animName = animName;
+    void MapElement::collide( const MapElemVec &elems ) {
+
+    }
+
+    void MapElement::playAnimation( const std::string &name, const std::string &animSubName ) {
+        if (auto animInfo = MapAnimation::sharedMapAnimation()->createAnimation(name, animSubName)) {
+            if (!m_mainSpr) {
+                m_mainSpr = cocos2d::Sprite::create();
+                m_mainSpr->setAnchorPoint(cocos2d::Vec2(0.5, 0.5));
+                addChild(m_mainSpr);
+            }
+
+            auto action = cocos2d::RepeatForever::create(cocos2d::Animate::create(animInfo));
+            action->setTag(MAP_ELEM_ANIM_TAG);
+
+            m_mainSpr->stopActionByTag(MAP_ELEM_ANIM_TAG);
+            m_mainSpr->runAction(action);
+        }
+    }
+
+    void MapElement::playAnimation( const std::string &subName ) {
+        playAnimation(m_animName, subName);
+    }
+
+    void MapElement::setMainAnimName( const std::string &animName ) {
+        m_animName = animName;
+    }
 }

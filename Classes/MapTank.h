@@ -3,26 +3,29 @@
 
 #include "MapMovableElement.h"
 
-class IFireBehaviour;
+namespace gouki {
+    class IFireBehaviour;
 
-class MapTank : public MapMovableElement
-{
-public:
-    MapTank();
+    class MapTank : public MapMovableElement
+    {
+    public:
+        MapTank();
+        virtual ~MapTank();
 
-    virtual bool init();
+        virtual bool init() override;
 
-    virtual void update(float dt);
+        virtual void update(float dt) override;
 
-    virtual bool isBlock(const MapElemVec &elems);
-    virtual void collide(const MapElemVec &elems);
+        virtual bool isBlock(const MapElemVec &elems) override;
+        virtual void collide(const MapElemVec &elems) override;
 
-    virtual void setFireBehaviour(IFireBehaviour *behaviour);
+        virtual void setFireBehaviour(IFireBehaviour *behaviour);
 
-    virtual void fire();
+        virtual void fire();
 
-protected:
-    IFireBehaviour *m_fireBehaviour;
-};
+    protected:
+        IFireBehaviour *m_fireBehaviour;
+    };
+}
 
 #endif // MapTank_h__

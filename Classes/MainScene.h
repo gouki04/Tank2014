@@ -1,17 +1,19 @@
 #ifndef MainScene_h__
 #define MainScene_h__
 
-#include "layers_scenes_transitions_nodes\CCScene.h"
+#include "cocos\2d\CCScene.h"
 
-class MainScene : public cocos2d::CCScene
-{
-public:
-    MainScene();
-    virtual ~MainScene();
+namespace gouki {
+    class MainScene : public cocos2d::Scene
+    {
+    public:
+        MainScene();
+        virtual ~MainScene();
 
-    virtual void onEnter();
+        virtual void onEnter();
 
-    static MainScene *create();
-};
+        static MainScene *create();
+    };
+}
 
 #endif // MainScene_h__
