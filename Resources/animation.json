@@ -40,55 +40,55 @@
     "EnemyTank_1": {
         "idle": {
             "frames": [
-                "enemy1D.png"
+                "tank2U1.png"
             ],
             "rate": 8
         },
         "idleD": {
             "frames": [
-                "enemy1D.png"
+                "tank2D1.png"
             ],
             "rate": 8
         },
         "idleL": {
             "frames": [
-                "enemy1L.png"
+                "tank2L1.png"
             ],
             "rate": 8
         },
         "idleR": {
             "frames": [
-                "enemy1R.png"
+                "tank2R1.png"
             ],
             "rate": 8
         },
         "idleU": {
             "frames": [
-                "enemy1U.png"
+                "tank2U1.png"
             ],
             "rate": 8
         },
         "moveD": {
             "frames": [
-                "enemy1D.png"
+                "tank2D1.png", "tank2D2.png"
             ],
             "rate": 8
         },
         "moveL": {
             "frames": [
-                "enemy1L.png"
+                "tank2L1.png", "tank2L2.png"
             ],
             "rate": 8
         },
         "moveR": {
             "frames": [
-                "enemy1R.png"
+                "tank2R1.png", "tank2R2.png"
             ],
             "rate": 8
         },
         "moveU": {
             "frames": [
-                "enemy1U.png"
+                "tank2U1.png", "tank2U2.png"
             ],
             "rate": 8
         }
@@ -124,7 +124,7 @@
             ],
             "rate": 8
         },
-        "moveD": {
+        "move": {
             "frames": [
                 "enemy2D.png"
             ],
@@ -180,7 +180,7 @@
             ],
             "rate": 8
         },
-        "moveD": {
+        "move": {
             "frames": [
                 "enemy3D.png"
             ],
@@ -208,14 +208,8 @@
     "Bomb" : {
     	"idle" : {
     		"frames" : [
-    			"blast1.png",
-    			"blast2.png",
-    			"blast3.png",
-    			"blast4.png",
-    			"blast5.png",
-    			"blast6.png",
-    			"blast7.png",
-    			"blast8.png"
+    			"bomb_tank_1.png",
+    			"bomb_tank_2.png"
     		],
             "rate": 15
     	}
@@ -223,9 +217,8 @@
     "SmallBomb" : {
         "idle" : {
             "frames" : [
-                "blast1.png",
-                "blast2.png",
-                "blast3.png"
+                "bomb_bullet_1.png",
+                "bomb_bullet_2.png"
             ],
             "rate": 15
         }
@@ -233,55 +226,55 @@
     "UserTank_1": {
         "idle": {
             "frames": [
-                "p1tankD.png"
+                "tank1D1.png"
             ],
             "rate": 8
         },
         "idleD": {
             "frames": [
-                "p1tankD.png"
+                "tank1D1.png"
             ],
             "rate": 8
         },
         "idleL": {
             "frames": [
-                "p1tankL.png"
+                "tank1L1.png"
             ],
             "rate": 8
         },
         "idleR": {
             "frames": [
-                "p1tankR.png"
+                "tank1R1.png"
             ],
             "rate": 8
         },
         "idleU": {
             "frames": [
-                "p1tankU.png"
+                "tank1U1.png"
             ],
             "rate": 8
         },
         "moveD": {
             "frames": [
-                "p1tankD.png"
+                "tank1D1.png", "tank1D2.png"
             ],
             "rate": 8
         },
         "moveL": {
             "frames": [
-                "p1tankL.png"
+                "tank1L1.png", "tank1L2.png"
             ],
             "rate": 8
         },
         "moveR": {
             "frames": [
-                "p1tankR.png"
+                "tank1R1.png", "tank1R2.png"
             ],
             "rate": 8
         },
         "moveU": {
             "frames": [
-                "p1tankU.png"
+                "tank1U1.png", "tank1U2.png"
             ],
             "rate": 8
         }
@@ -345,55 +338,55 @@
     "Bullet1": {
         "idle": {
             "frames": [
-                "bullet1D.png"
+                "bulletD.png"
             ],
             "rate": 8
         },
         "idleD": {
             "frames": [
-                "bullet1D.png"
+                "bulletD.png"
             ],
             "rate": 8
         },
         "idleL": {
             "frames": [
-                "bullet1L.png"
+                "bulletL.png"
             ],
             "rate": 8
         },
         "idleR": {
             "frames": [
-                "bullet1R.png"
+                "bulletR.png"
             ],
             "rate": 8
         },
         "idleU": {
             "frames": [
-                "bullet1U.png"
+                "bulletU.png"
             ],
             "rate": 8
         },
         "moveD": {
             "frames": [
-                "bullet1D.png"
+                "bulletD.png"
             ],
             "rate": 8
         },
         "moveL": {
             "frames": [
-                "bullet1L.png"
+                "bulletL.png"
             ],
             "rate": 8
         },
         "moveR": {
             "frames": [
-                "bullet1R.png"
+                "bulletR.png"
             ],
             "rate": 8
         },
         "moveU": {
             "frames": [
-                "bullet1U.png"
+                "bulletU.png"
             ],
             "rate": 8
         }
