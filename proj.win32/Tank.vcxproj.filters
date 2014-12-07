@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\behaviour">
+      <UniqueIdentifier>{0c1b5aa3-1b1c-47b4-8968-3685f3c70cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\mapItem">
+      <UniqueIdentifier>{4052274c-8125-4658-b5f6-016786f778a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\MainScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Map.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapElementFactory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapAnimation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBase.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBullet.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapElement.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapEnemyTank.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapMovableElement.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapTank.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapUserTank.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_AI.cpp">
+      <Filter>src\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapCollideMgr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_Bullet.cpp">
+      <Filter>src\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MoveBehaviour_Keyboard.cpp">
+      <Filter>src\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\KeyBoardMgr.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapBrick.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapGrass.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapItem.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapSteel.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapWall.cpp">
+      <Filter>src\mapItem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\MainScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Map.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapElementFactory.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapAnimation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IFireBehaviour.h">
+      <Filter>src\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\IMoveBehaviour.h">
+      <Filter>src\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBase.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBullet.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapElement.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapEnemyTank.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapMovableElement.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapTank.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapUserTank.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_AI.h">
+      <Filter>src\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapCollideMgr.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_Bullet.h">
+      <Filter>src\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MoveBehaviour_Keyboard.h">
+      <Filter>src\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\KeyBoardMgr.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapBrick.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapGrass.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapItem.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapSteel.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapWall.h">
+      <Filter>src\mapItem</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
