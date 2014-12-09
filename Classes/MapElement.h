@@ -7,6 +7,9 @@
 
 namespace cocos2d {
     class Sprite;
+    class Renderer;
+    class Mat4;
+    class DrawNode;
 }
 
 namespace gouki {
@@ -28,6 +31,8 @@ namespace gouki {
         virtual eMapElement getElemType() = 0;
         virtual std::string getElemTypeStr() = 0;
 
+        virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, uint32_t flags) override;
+
         virtual bool isBlock() const { return false; }
 
         virtual bool isBlock(const MapElemVec &elems);
@@ -42,7 +47,10 @@ namespace gouki {
 
     protected:
         Map *m_map;
+
         cocos2d::Sprite *m_mainSpr;
+        cocos2d::DrawNode *m_debugDrawNode;
+
         std::string m_animName;
     };
 }

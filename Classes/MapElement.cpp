@@ -7,8 +7,10 @@
 
 namespace gouki {
     MapElement::MapElement()
-        : m_mainSpr(0) {
-
+        : m_mainSpr(0)
+        , m_debugDrawNode(nullptr) {
+        m_debugDrawNode = cocos2d::DrawNode::create();
+        addChild(m_debugDrawNode);
     }
 
     MapElement::~MapElement() {
@@ -67,5 +69,24 @@ namespace gouki {
 
     void MapElement::setMainAnimName( const std::string &animName ) {
         m_animName = animName;
+    }
+
+    void MapElement::draw( cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, uint32_t flags ) {
+        cocos2d::Node::draw(renderer, transform, flags);
+
+        if (m_debugDrawNode) {
+            m_debugDrawNode->clear();
+
+            cocos2d::Rect aabb = getBoundingBox();
+
+            cocos2d::Vec2 verties[4] = {
+                cocos2d::Vec2(0.f, 0.f),
+                cocos2d::Vec2(aabb.size.width, 0.f),
+                cocos2d::Vec2(aabb.size.width, aabb.size.height),
+                cocos2d::Vec2(0.f, aabb.size.height)
+            };
+
+            m_debugDrawNode->drawPoly(verties, 4, true, cocos2d::Color4F(1.f, 0.f, 0.f, 1.f));
+        }
     }
 }
